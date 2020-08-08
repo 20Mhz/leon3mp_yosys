@@ -6,6 +6,7 @@ Only script from strategy 3 will pass
 
 Add link to gaisler folder
 
+mkdir VHDL
 ln -s ../grlib-gpl-2020.2-b4254/lib/ .
 
 source openlane.env
