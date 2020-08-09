@@ -175,8 +175,9 @@ leon3mp:  techmap_target grlib_target gaisler_target esa_target
 	cd VHDL && ghdl -i ../src/ahbrom.vhd
 	cd VHDL && ghdl -i ../src/leon3mp.vhd
 	cd VHDL && ghdl -m leon3mp 
+	date > leon3mp
 
-yosys: 
+yosys: leon3mp
 	cd VHDL && yosys -m ghdl -c ../scripts/yosys.tcl 2>&1 | tee ../logs/yosys.log
 
 build_sim: leon3mp
